@@ -25,3 +25,10 @@ $router->group(['middleware' => 'auth:api'], function($router)
         ]);
     });
 });
+
+//product routes
+$router->get('products', 'ProductsController@index');
+$router->get('products/{id}', 'ProductsController@show');
+$router->put('products/{id}', 'ProductsController@update');
+$router->post('products', 'ProductsController@store');
+$router->delete('products/{id}', 'ProductsController@destroy');

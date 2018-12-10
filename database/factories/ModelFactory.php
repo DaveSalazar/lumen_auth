@@ -18,3 +18,11 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'password' => app('hash')->make('12345')
     ];
 });
+
+
+$factory->define(App\Product::class, function (Faker\Generator $faker) {
+    return [
+        'product_name' => $faker->word,
+        'product_description' => $faker->text,
+    ];
+});
