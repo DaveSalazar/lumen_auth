@@ -13,7 +13,7 @@ class UserAuthTest extends TestCase
     public function testUserLogin()
     {
         $user = factory('App\User')->create();
-        echo $user->name;
+       
         $this->post('/auth/login', ['email' => $user->email, 'password' => '12345'])
         ->seeStatusCode(200)
         ->seeJsonStructure([
